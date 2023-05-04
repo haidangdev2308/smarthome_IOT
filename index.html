@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Smart Home</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/img/58872874-white-smart-home-icon-on-blue-button-isolated-on-white.webp">
+</head>
+<body>
+    <div id="toast">    
+    </div>
+    <div id="app">
+        <header class="header">
+            <img class="header-logo" src="./assets/img/istockphoto-1218148871-612x612.jpg" alt="logo">
+            <h1 class="header-title">Welcome Home
+            </h1>
+            <div class="header-search-wrap">
+                <input class="header-search" type="search" name="" placeholder="Search" id="">
+            </div>
+            <div onclick="showToast()" class="header-mess">
+                <i class="fa-regular fa-message fa-flip-horizontal"></i>
+            </div>
+            <div onclick="showToast()" class="header-setting">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <span class="user-name">Dang</span>
+            <div class="user-img">
+                <img src="./assets/img/businessman-character-avatar-isolated_24877-60111.webp" alt="">
+                <ul class="user-wrapper">
+                    <li class="user-item">
+                        <p>Thông tin</p>
+                    </li>
+                    <li class="user-item">
+                        <p>Liên hệ</p>
+                    </li>
+                    <li class="user-item">
+                        <p>Đăng xuất</p>
+                    </li>
+                </ul>
+                
+            </div>
+        </header>
+        <div class="container">
+            <menu class="menu">
+                <div class="page-control active">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <span class="menu-title">Home</span>
+                </div>
+                <div class="page-control">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <span class="menu-title">Living Room</span>
+                </div>
+                <div class="page-control">
+                    <div class="menu-icon">
+                        <i class="fa-sharp fa-solid fa-fire-burner"></i>
+                    </div>
+                    <span class="menu-title">Kitchen</span>
+                </div>
+                <div class="page-control">
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <span class="menu-title">Bed room</span>
+                </div>
+            </menu>
+            <div class="main-content">
+                <div class="content active">
+                    <div class="home-content__top">
+                        <div class="info-1">
+                            <div class="home-weather">
+                                <h3 class="weather__welcome">Welcome Home,</h3>
+                                <strong class="weather__name">Dang !</strong>
+                                <p class="weather__currentday"></p>
+                                <div class="weather__hum-temp">
+                                    <div class="weather__hum">
+                                        <i class="fa-solid fa-droplet"></i>
+                                        <span>50%</span>
+                                    </div>
+                                    <div class="weather__temp">
+                                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                                        <span>27 &deg;C</span>
+                                    </div>
+                                </div>
+                                <div class="weather__img">
+                                    <i class="fa-solid fa-cloud-sun-rain"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-2">
+                            <section>
+                                <div class="container">
+                                    <div class="icons">
+                                        <i class="fas fa-moon"></i>
+                                        <i class="fas fa-sun"></i>
+                                    </div>
+                                    <div class="time">
+                                        <div class="time-colon">
+                                        <div class="time-text">
+                                            <span class="num hour_num"></span>
+                                            <span class="text">Hours</span>
+                                        </div>
+                                        <span class="colon">:</span>
+                                        </div>
+                                        <div class="time-colon">
+                                        <div class="time-text">
+                                            <span class="num min_num"></span>
+                                            <span class="text">Minutes</span>
+                                        </div>
+                                        <span class="colon">:</span>
+                                        </div>
+                                        <div class="time-colon">
+                                        <div class="time-text">
+                                            <span class="num sec_num"></span>
+                                            <span class="text">Seconds</span>
+                                        </div>
+                                        <span class="am_pm">AM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="home-content__bot">
+                        <span>Members: </span>
+                        <div class="member-avatar">
+                            <img src="./assets/img/avt1.png" alt="">
+                        </div>
+                        <div class="member-avatar">
+                            <img src="./assets/img/avt2.png" alt="">
+                        </div>
+                        <div class="member-avatar">
+                            <img src="./assets/img/avt3.png" alt="">
+                        </div>
+                        <div class="member-avatar">
+                            <img src="./assets/img/avt5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="room-wrapper">
+                        <div class="content__sensor">
+                            <div class="content__sensor-1">
+                                <div class="sensor-quantity">
+                                    <h2 class="sensor-name">
+                                        <i class="fa-sharp fa-solid fa-circle"></i>
+                                        Temperature
+                                    </h2>
+                                    <div class="sensor-img">
+                                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                                        <span>25 &deg;C</span>
+                                    </div>
+                                </div>
+                                <div class="sensor-quantity">
+                                    <h2 class="sensor-name">
+                                        <i class="fa-sharp fa-solid fa-circle"></i>
+                                        Humidity
+                                    </h2>
+                                    <div class="sensor-img">
+                                        <i class="fa-solid fa-droplet"></i>
+                                        <span>40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__sensor-2">
+                                <img src="./assets/img/6370fd_e43f76df0db345adbd7fa4d3b3d16d3a~mv2.webp" alt="" class="sensor-map-img">
+                            </div>
+                        </div>
+                        <div class="devices-control">
+                            <h3 class="devices-title">
+                                <i class="fa-sharp fa-solid fa-circle"></i>
+                                Devices
+                            </h3>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                    <span>Lights</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <span>Wi-fi</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-tv"></i>
+                                    <span>TV</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="empty-wrapper">
+                                <span>empty</span>
+                                <i style="font-size: 20px; cursor: pointer;" onclick="showToast()" class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="room-wrapper">
+                        <div class="content__sensor">
+                            <div class="content__sensor-1">
+                                <div class="sensor-quantity">
+                                    <h2 class="sensor-name">
+                                        <i class="fa-sharp fa-solid fa-circle"></i>
+                                        Temperature
+                                    </h2>
+                                    <div class="sensor-img">
+                                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                                        <span>25 &deg;C</span>
+                                    </div>
+                                </div>
+                                <div class="sensor-quantity">
+                                    <h2 class="sensor-name">
+                                        <i class="fa-sharp fa-solid fa-circle"></i>
+                                        Humidity
+                                    </h2>
+                                    <div class="sensor-img">
+                                        <i class="fa-solid fa-droplet"></i>
+                                        <span>40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__sensor-2">
+                                <img src="./assets/img/6370fd_e43f76df0db345adbd7fa4d3b3d16d3a~mv2.webp" alt="" class="sensor-map-img">
+                            </div>
+                        </div>
+                        <div class="devices-control">
+                            <h3 class="devices-title">
+                                <i class="fa-sharp fa-solid fa-circle"></i>
+                                Devices
+                            </h3>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                    <span>Lights</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <span>Wi-fi</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-tv"></i>
+                                    <span>TV</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="empty-wrapper">
+                                <span>empty</span>
+                                <i style="font-size: 20px; cursor: pointer;" onclick="showToast()" class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="room-wrapper">
+                        <div class="content__sensor">
+                            <div class="content__sensor-1">
+                                <div class="sensor-quantity">
+                                    <h2 class="sensor-name">
+                                        <i class="fa-sharp fa-solid fa-circle"></i>
+                                        Temperature
+                                    </h2>
+                                    <div class="sensor-img">
+                                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                                        <span>25 &deg;C</span>
+                                    </div>
+                                </div>
+                                <div class="sensor-quantity">
+                                    <h2 class="sensor-name">
+                                        <i class="fa-sharp fa-solid fa-circle"></i>
+                                        Humidity
+                                    </h2>
+                                    <div class="sensor-img">
+                                        <i class="fa-solid fa-droplet"></i>
+                                        <span>40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__sensor-2">
+                                <img src="./assets/img/6370fd_e43f76df0db345adbd7fa4d3b3d16d3a~mv2.webp" alt="" class="sensor-map-img">
+                            </div>
+                        </div>
+                        <div class="devices-control">
+                            <h3 class="devices-title">
+                                <i class="fa-sharp fa-solid fa-circle"></i>
+                                Devices
+                            </h3>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                    <span>Lights</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <span>Wi-fi</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="devices-wrapper">
+                                <div class="device-img">
+                                    <i class="fa-solid fa-tv"></i>
+                                    <span>TV</span>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-btn" ></div>
+                                </div>
+                            </div>
+                            <div class="empty-wrapper">
+                                <span>empty</span>
+                                <i style="font-size: 20px; cursor: pointer;" onclick="showToast()" class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-member">
+                <img style="height: 30px;" src="./assets/img/Screenshot 2023-05-04 133052.jpg" alt="" class="member-img">
+                <div class="member-info">
+                    <span class="member-name">Lê Minh Hải Đăng</span>
+                    <span class="member-id">Mssv: 20119217</span>
+                </div>
+            </div>
+            <div class="footer-member">
+                <img src="./assets/img/z4183264726160_a6118f6e46f1e5e160060f976705a527.jpg" alt="" class="member-img">
+                <div class="member-info">
+                    <span class="member-name">Phạm Quốc Việt</span>
+                    <span class="member-id">Mssv: 20119307</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
